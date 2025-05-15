@@ -2,102 +2,30 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="px-4">
+      <section className="flex flex-col lg:flex-row">
+        <div className="py-6 lg:px-8 flex-1">
+          <h1 className="font-serif text-6xl font-light">Apple I</h1>
+          <p className="text-sm mt-3 text-muted-foreground">Apr. 11, 1976</p>
+          <p className="leading-7 [&:not(:first-child)]:mt-6">
+            In 1975, Steve Wozniak designed the Apple I as his personal computer to use the ARPANET and play games. Its enthusiastic reception among the members of Silicon Valley’s Homebrew Computer Club prompted Wozniak and Steve Jobs to form Apple Computers to manufacture the Apple I. Wozniak designed the Apple I around two principles; making the machine affordable by minimizing the number of chips; and the ability to output video to a TV screen most users already owned. With the incorporation of the microprocessor and dynamic RAM, the Apple I proved how small, simple, and cheap a usable computer could be.
+          </p>
+          <p className="leading-7 [&:not(:first-child)]:mt-6">
+            The computer sold as a single board for $666.66 since Wozniak liked repeating digits. To complete the setup the board required a video display monitor, an ASCII encoded keyboard, and an AC connected power unit supplying 8 volts at 3 amps and 28 volts at 1 amp. Aside from the 6502 microprocessor running at 1.023 MHz, the Apple included four kilobytes of memory (enough to run BASIC), expandable to 8KB on board, or 64KB using expansion cards. A cassette interface was also available for the expansion slot, allowing for data storage and programming, such as easily loading the BASIC interpreter without having to program it in by hand.
+          </p>
+          <p className="leading-7 [&:not(:first-child)]:mt-6">
+            The Apple I heralded a shift in personal computing. In the years prior, most computers were sold as kits, or assembled at a premium by the manufacturer. The purchase of a board that was completely tested and in working order led to “hassle-free” computing, helping spur personal computing towards a more mainstream consumer market. In 1977, the Commodore PET, TRS-80, and Apple II were released as assembled PCs, and hardware and software companies surged into a newly created market.
+          </p>
+          <p className="leading-7 [&:not(:first-child)]:mt-6">
+            Apple Computers gave owners the option to trade in their Apple I for an Apple II, mainly to free Wozniak from his customer services duties as the only designer of the computer. With about only 200 made, and many removed from circulation due to the returns, Apple I’s have become a valuable collector’s item.
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        {/* <div className="bg-card rounded-2xl sticky top-28 h-[calc(100dvh-8rem)] lg:max-w-[45%] flex-1">
+          <RenderModel>
+            <Model source={"https://cloud.appwrite.io/v1/storage/buckets/67e8525300339f64d6e5/files/67ea00e6003b9a69b09b/view?project=67e8520d003c0b64405c&mode=admin"}/>
+          </RenderModel>
+        </div> */}
+      </section>
+    </main>
   );
 }

@@ -1,16 +1,37 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from 'next/font/local';
 import "./globals.css";
+import Header from '@/components/header/Header';
+import Footer from '@/components/footer/Footer';
+import { ThemeProvider } from "@/components/theme/theme-provider"
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const appleGaramond = localFont({
+  src: [
+    {
+      path: '../../public/fonts/apple-garamond/AppleGaramond.woff',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/apple-garamond/AppleGaramond-Italic.woff',
+      weight: '400',
+      style: 'italic',
+    },
+    {
+      path: '../../public/fonts/apple-garamond/AppleGaramond-Light.woff',
+      weight: '300',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/apple-garamond/AppleGaramond-LightItalic.woff',
+      weight: '300',
+      style: 'italic',
+    }
+  ],
+  variable: '--font-apple-garamond',
+})
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const chicagoFLF = localFont({ src: '../../public/fonts/chicago/chicago.ttf', variable: '--font-chicagoFLF' })
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -23,11 +44,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${chicagoFLF.className} ${appleGaramond.variable} antialiased`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
