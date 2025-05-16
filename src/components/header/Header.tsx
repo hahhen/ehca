@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
 import { Button } from "@/components/ui/button";
+import Sidebar from "./Sidebar";
 
 export default function Header() {
 
@@ -10,7 +11,7 @@ export default function Header() {
                 <Image src="/logo.svg" alt="Logo" width={45} height={45} />
                 <h1 className="text-xl leading-none antialiased font-serif font-light tracking-tight ml-2">Computadores <br /> Revolucionários</h1>
             </div>
-            <NavigationMenu className="hidden lg:flex">
+            <NavigationMenu className="hidden lg:flex  ">
                 <NavigationMenuList className="flex text-sm">
                     <NavigationMenuItem>
                         <Button variant="ghost" asChild><NavigationMenuLink href="#" >Home</NavigationMenuLink></Button>
@@ -26,6 +27,7 @@ export default function Header() {
                     </NavigationMenuItem>
                 </NavigationMenuList>
             </NavigationMenu>
+            <Sidebar className="lg:hidden"/>
         </header>
     )
 
