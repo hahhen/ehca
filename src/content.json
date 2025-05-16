@@ -1,0 +1,63 @@
+{
+  "titulo": "Leibniz e Computação: Sistema Binário e Contador Mecânico",
+  "introducao": [
+    "Gottfried Wilhelm Leibniz (1646-1716) foi um matemático, filósofo e cientista alemão cujas contribuições para a computação foram revolucionárias e se mantêm relevantes até os dias de hoje. Este site explora duas de suas principais inovações: o sistema binário e o contador mecânico.",
+    "As ideias de Leibniz lançaram as bases para o desenvolvimento dos computadores modernos, demonstrando sua visão à frente de seu tempo e seu incrível engenho matemático e mecânico."
+  ],
+  "secoes": [
+    {
+      "subtitulo": "A Revolução do Sistema Binário (1679)",
+      "paragrafos": [
+        "A invenção, ou descoberta, do moderno sistema binário é atribuída a Gottfried Leibniz, que o apresentou em seu artigo 'Explication de l'Arithmétique Binaire' em 1679.",
+        "Enquanto o mundo estava acostumado a representar números no sistema decimal (usando algarismos de 0 a 9), Leibniz propôs um sistema mais simples utilizando apenas dois algarismos: 0 e 1.",
+        "No sistema binário, a contagem funciona de maneira diferente: após o 1 vem 10, depois 11, depois 100, e assim por diante. Isso significa que o 10 binário corresponde ao 2 decimal, e o 100 binário ao 4 decimal.",
+        "Leibniz defendeu que esta era a forma mais simples e pura de entender e manipular números, principalmente porque as operações aritméticas se tornavam muito mais simples, sem a necessidade de memorizar tabuadas complexas.",
+        "Um fato notável é que Leibniz chegou a descrever um mecanismo de computação surpreendentemente semelhante aos computadores modernos, incluindo o conceito do que viria a ser o sistema de cartões perfurados para entrada e saída de dados.",
+        "Esta visão foi profética, já que hoje a maioria dos computadores modernos opera fundamentalmente no sistema binário devido à facilidade de implementação em circuitos eletrônicos."
+      ]
+    },
+    {
+      "subtitulo": "Aritmética Binária: As Quatro Operações Fundamentais",
+      "paragrafos": [
+        "Uma das grandes vantagens do sistema binário, conforme apresentado por Leibniz, é a simplicidade das operações aritméticas básicas.",
+        "Para a soma binária, existem apenas quatro possibilidades: 0+0=0, 0+1=1, 1+0=1, e 1+1=10 (que significa 'vai um' para a próxima coluna).",
+        "Na subtração binária, também temos apenas quatro casos: 0-0=0, 10-1=1, 1-0=1, e 1-1=0.",
+        "A multiplicação se torna extraordinariamente simples, com apenas quatro combinações possíveis: 0×0=0, 0×1=0, 1×0=0, e 1×1=1.",
+        "Para a divisão, basta seguir uma regra simples: se o divisor tiver n dígitos significativos, tome os primeiros n dígitos do dividendo e compare; se esse número for maior ou igual ao divisor, o resultado é 1, caso contrário, é 0.",
+        "Essas operações seguem o mesmo procedimento das operações decimais, mas com muito menos casos a considerar, tornando o cálculo mais direto e menos propenso a erros.",
+        "Por exemplo, para somar 12 (1100 em binário) e 6 (110 em binário), seguimos o processo normal de soma, porém usando apenas as regras binárias, resultando em 18 (10010 em binário).",
+        "Esta simplicidade na aritmética binária é um dos principais motivos pelos quais os computadores modernos utilizam esse sistema, pois é muito mais fácil implementar essas operações com portas lógicas eletrônicas."
+      ]
+    },
+    {
+      "subtitulo": "O Contador Mecânico de Leibniz (1694)",
+      "paragrafos": [
+        "A história conta que a inspiração de Leibniz para criar um calculador mecânico veio em 1672, quando ele conheceu um pedômetro, um aparelho capaz de contar os passos de uma pessoa.",
+        "Após entrar em contato com os escritos de Pascal e conhecer a Pascalina (uma das primeiras calculadoras mecânicas), Leibniz ficou obcecado pela ideia de aperfeiçoá-la para realizar multiplicações e divisões de forma totalmente automatizada.",
+        "Inicialmente, Leibniz tentou adaptar o mecanismo de Pascal, mas logo percebeu que para automatizar multiplicações e divisões precisaria criar algo completamente novo.",
+        "O resultado foi o desenvolvimento de sua máquina, conhecida como 'Stepped Reckoner' (Contador Escalonado), que esteve em desenvolvimento por aproximadamente 40 anos.",
+        "O primeiro protótipo, capaz de operar com apenas dois dígitos, foi construído em 1672 e apresentado na Academia Francesa de Ciências.",
+        "Apenas duas máquinas originais da época de Leibniz sobreviveram até os nossos dias. Uma delas ficou esquecida em um sótão na Universidade de Göttingen até ser descoberta acidentalmente em 1879, durante um reparo no telhado.",
+        "O projeto final de Leibniz acabou se tornando a base para as calculadoras mecânicas que permaneceram em uso até a década de 1970, quando foram finalmente substituídas pelos modelos eletrônicos."
+      ]
+    },
+    {
+      "subtitulo": "O Cilindro Escalonado: Inovação Mecânica para o Cálculo",
+      "paragrafos": [
+        "A verdadeira revolução no contador mecânico de Leibniz foi a invenção do cilindro escalonado (stepped-drum), um mecanismo totalmente novo que permitia realizar multiplicações e divisões automaticamente.",
+        "O cilindro escalonado consistia em um cilindro com dentes de diferentes extensões. A cada giro completo da manivela, o movimento era transferido para um acumulador através de uma engrenagem.",
+        "A quantidade de movimento transferida ao acumulador dependia da posição do seletor, que podia mover a engrenagem para a direita ou para a esquerda. Quanto mais à esquerda a engrenagem estivesse, menor o número de dentes que a movimentariam a cada giro.",
+        "Para efetuar somas e subtrações, bastava posicionar os indicadores dos diferentes dígitos nos números desejados e girar a manivela uma volta completa. O sentido horário realizava somas e o anti-horário, subtrações.",
+        "Para multiplicações simples, como 825×3, o operador posicionava os indicadores nos dígitos 8, 2 e 5, e girava a manivela 3 vezes, realizando efetivamente a operação 825+825+825.",
+        "Para multiplicações de números maiores, como 1873×249, Leibniz criou um mecanismo ainda mais engenhoso. O conjunto era posicionado primeiro na casa das centenas para dois giros, depois nas dezenas para quatro giros, e finalmente nas unidades para nove giros, calculando 1873×(2×100) + 1873×(4×10) + 1873×(9×1).",
+        "Acredita-se que a máquina de Leibniz não tenha sido um sucesso completo em sua época devido ao alto custo e porque aparentemente o problema do mecanismo de 'vai um' (carry) não foi completamente resolvido, exigindo intervenção manual em alguns casos."
+      ]
+    }
+  ],
+  "conclusao": [
+    "As contribuições de Gottfried Leibniz para a computação foram verdadeiramente visionárias. Seu sistema binário, apresentado há mais de 340 anos, é hoje a linguagem fundamental dos computadores modernos.",
+    "Seu contador mecânico, com o inovador cilindro escalonado, estabeleceu os princípios que guiaram o desenvolvimento de calculadoras mecânicas por quase três séculos.",
+    "Leibniz demonstrou uma incrível capacidade de simplificar e automatizar processos complexos, preparando o caminho para a era da computação que vivemos hoje.",
+    "Sua história nos mostra como ideias revolucionárias podem surgir da busca pela simplicidade e eficiência, e como o trabalho de um só indivíduo pode influenciar o mundo por séculos."
+  ]
+}
