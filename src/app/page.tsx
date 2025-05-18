@@ -1,8 +1,10 @@
+import Bin from "@/components/bin/page";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <main className="px-4">
+      <Bin/>
       <section className="flex flex-col lg:flex-row">
         <div className="py-6 lg:px-8 flex-1">
           <h1 className="font-serif text-6xl font-light">Apple I</h1>
