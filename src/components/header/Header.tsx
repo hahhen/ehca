@@ -6,7 +6,7 @@ import Sidebar from "./Sidebar";
 export default function Header() {
 
     return (
-        <header className="my-4 mx-2 lg:mx-4 flex justify-between items-center py-6 rounded-2xl px-4 lg:px-8 bg-card/80 z-50 backdrop-blur-md sticky top-3">
+        <header className="my-4 border mx-2 lg:mx-4 flex justify-between items-center py-6 rounded-2xl px-4 lg:px-8 bg-card/80 z-50 backdrop-blur-md sticky top-3">
             <div className="flex items-center gap-1">
                 <Image src="/logo.svg" alt="Logo" width={45} height={45} />
                 <h1 className="text-xl leading-none antialiased font-serif font-light tracking-tight ml-2">Computadores <br /> Revolucionários</h1>

@@ -45,16 +45,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${chicagoFLF.className} ${appleGaramond.variable} antialiased`}>
+      <body className={`${chicagoFLF.className} ${appleGaramond.variable} antialiased w-full`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
-          {children}
-          <Footer />
+          <div className="max-w-[1600px] mx-auto">
+            <Header />
+            {children}
+            <Footer />
+          </div>
         </ThemeProvider>
       </body>
     </html>
