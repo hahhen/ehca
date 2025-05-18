@@ -9,12 +9,11 @@ import {
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 
-export default function AppliedCarousel(secao: { paragrafos: any[] }) {
+export default function AppliedCarousel(secao: { paragrafos: string[] }) {
 
     const [api, setApi] = useState<CarouselApi>()
     const [current, setCurrent] = useState(0)
     const [count, setCount] = useState(0)
-    const [container, setContainer] = useState<HTMLElement | null>(null)
 
     useEffect(() => {
         if (!api) {

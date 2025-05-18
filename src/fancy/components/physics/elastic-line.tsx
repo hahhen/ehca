@@ -39,7 +39,7 @@ const ElasticLine: React.FC<ElasticLineProps> = ({
   className,
 }) => {
   const containerRef = useRef<SVGSVGElement>(null)
-  const dimensions = useDimensions(containerRef)
+  const dimensions = useDimensions(containerRef as React.RefObject<SVGElement>)
   const pathRef = useRef<SVGPathElement>(null)
   const [hasAnimatedIn, setHasAnimatedIn] = useState(false)
 
@@ -50,7 +50,7 @@ const ElasticLine: React.FC<ElasticLineProps> = ({
   )
 
   const { isGrabbed, controlPoint } = useElasticLineEvents(
-    containerRef,
+    containerRef as React.RefObject<SVGSVGElement>,
     isVertical,
     grabThreshold,
     clampedReleaseThreshold

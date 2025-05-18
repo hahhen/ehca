@@ -1,31 +1,9 @@
 "use client"
 
-import Image from "next/image";
-import { Button } from "@/components/ui/button"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/components/ui/tabs"
-
-import React, { createContext, useEffect, useState } from "react";
-import { Separator } from "@radix-ui/react-separator";
-import { Toggle } from "@/components/ui/toggle";
-import Bit from "@/components/fourBits";
+import { createContext, useEffect, useState, Dispatch, SetStateAction } from "react";
 import FourBits from "@/components/fourBits";
 
-export const bitsContext = createContext<{a:number, setA:any, b:number, setB:any} | null>(null)
+export const bitsContext = createContext<{a:number, setA:Dispatch<SetStateAction<number>>, b:number, setB:Dispatch<SetStateAction<number>>} | null>(null)
 
 export default function Bin() {
 

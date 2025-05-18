@@ -1,16 +1,14 @@
 import { Button } from "@/components/ui/button";
-import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
+import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from "@/components/ui/navigation-menu";
 import {
     Sheet,
-    SheetClose,
     SheetContent,
-    SheetDescription,
     SheetFooter,
     SheetHeader,
     SheetTitle,
     SheetTrigger,
 } from "@/components/ui/sheet";
-import { Hamburger, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
 
 export default function Sidebar({ className }: { className?: string }) {
 
