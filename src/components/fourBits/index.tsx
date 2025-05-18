@@ -28,10 +28,8 @@ export default function FourBits(props : {v : string}) {
 
   }, [n])
 
-  
-
   return (
-    <main className="font-mono w-fit m-auto flex flex-col mx-7">
+    <main className="font-mono w-fit m-auto flex flex-col mx-7 my-0">
       <div className="flex flex-row-reverse">
         {
           n.map((b, i) =>
@@ -39,7 +37,7 @@ export default function FourBits(props : {v : string}) {
           )
         }
       </div>
-      <span className="m-auto">
+      <span className="m-auto text-3xl">
         {props.v == "a"? a : b}
       </span>
     </main>
