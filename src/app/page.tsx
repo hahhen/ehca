@@ -20,6 +20,7 @@ import {
 import { secureHeapUsed } from "crypto";
 import { Button } from "@/components/ui/button";
 import AppliedCarousel from "@/components/carousel/carousel";
+import { Separator } from "@/components/ui/separator";
 
 
 export default function Home() {
