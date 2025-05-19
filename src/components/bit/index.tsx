@@ -1,42 +1,18 @@
 "use client"
 
-import Image from "next/image";
-import { Button } from "@/components/ui/button"
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
-    CardTitle,
-} from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import {
-    Tabs,
-    TabsContent,
-    TabsList,
-    TabsTrigger,
-} from "@/components/ui/tabs"
-
-import { useContext, useEffect, useState } from "react";
 import { Separator } from "@radix-ui/react-separator";
-import { Toggle } from "@/components/ui/toggle";
-import { bitsContext } from "../bin/page";
 
 interface BitProps {
     arr: number[]
     i: number
-    set(arr:number[]):any
+    set(arr:number[]):void
 }
 
 export default function Bit({ arr, i, set }: BitProps) {
 
     function handleToggleBit(arr: number[], i: number) {
-        let tempArr = [...arr]
-        let tempE = arr[i]
-        console.log(tempE);
-        
+        const tempArr = [...arr]
+        const tempE = arr[i]
         tempArr[i] = tempE == 0 ? 1 : 0
         set(tempArr)
     }

@@ -1,27 +1,6 @@
 "use client"
 
-import Image from "next/image";
-import { Button } from "@/components/ui/button"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/components/ui/tabs"
-
 import { useContext, useEffect, useState } from "react";
-import { Separator } from "@radix-ui/react-separator";
-import { Toggle } from "@/components/ui/toggle";
 import Bit from "../bit";
 import { bitsContext } from "../bin/page";
 
@@ -29,10 +8,8 @@ export default function FourBits(props : {v : string}) {
   const context = useContext(bitsContext)
 
   const a = context?.a
-  const setA = context?.setA
 
   const b = context?.b
-  const setB = context?.setB
 
   const [n, setN] = useState([0,0,0,0])
 
@@ -43,7 +20,11 @@ export default function FourBits(props : {v : string}) {
       tempN += n[i] * 2 ** i
     }
 
-    props.v == "a"? setA(tempN) : setB(tempN)
+    if (props.v === "a") {
+      context?.setA?.(tempN);
+    } else {
+      context?.setB?.(tempN);
+    }
 
   }, [n])
 

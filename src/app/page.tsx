@@ -4,46 +4,18 @@ import Bin from "@/components/bin/page";
 import Image from "next/image";
 import data from "@/content.json";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
-import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
 import ElasticLine from "@/fancy/components/physics/elastic-line";
-import { useEffect, useState } from "react";
-import StackingCards, { StackingCardItem } from "@/fancy/components/blocks/stacking-cards";
+import { useState } from "react";
 import { cn } from "@/lib/utils";
-import {
-  Carousel,
-  CarouselApi,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
-import { secureHeapUsed } from "crypto";
-import { Button } from "@/components/ui/button";
+import StackingCards, { StackingCardItem } from "@/fancy/components/blocks/stacking-cards";
 import AppliedCarousel from "@/components/carousel/carousel";
 import { Separator } from "@/components/ui/separator";
 
 
 export default function Home() {
+  const colors = ["bg-slate-600", "bg-slate-700", "bg-slate-800", "bg-slate-900", "bg-slate-950"];
 
-  const [api, setApi] = useState<CarouselApi>()
-  const [current, setCurrent] = useState(0)
-  const [count, setCount] = useState(0)
   const [container, setContainer] = useState<HTMLElement | null>(null)
-
-  useEffect(() => {
-    if (!api) {
-      return
-    }
-
-    setCount(api.scrollSnapList().length)
-    setCurrent(api.selectedScrollSnap() + 1)
-
-    api.on("select", () => {
-      setCurrent(api.selectedScrollSnap() + 1)
-    })
-
-    console.log(count)
-  }, [api])
 
   return (
     <main className="px-2 lg:px-4 gap-4 flex flex-col" ref={(node) => setContainer(node)}>
@@ -97,8 +69,7 @@ export default function Home() {
             return (
               <StackingCardItem key={index} index={index} className="h-[620px]">
                 <div
-                  className={cn("bg-slate-" + (600 + 100 * index),
-                    " border h-[80%] sm:h-[70%] flex-col sm:flex-row gap-2 aspect-video px-4 lg:px-8 py-10 flex w-full rounded-3xl relative top-21 -mt-24 "
+                  className={cn(colors[index], "border h-[80%] sm:h-[70%] flex-col sm:flex-row gap-2 aspect-video px-4 lg:px-8 py-10 flex w-full rounded-3xl relative top-21 -mt-24 "
                   )}
                 >
                   <div className="flex-1 flex flex-col justify-center">

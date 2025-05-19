@@ -1,38 +1,13 @@
 "use client"
 
-import Image from "next/image";
-import { Button } from "@/components/ui/button"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/components/ui/tabs"
-
-import React, { createContext, useEffect, useState } from "react";
-import { Toggle } from "@/components/ui/toggle";
-import Bit from "@/components/fourBits";
-import { Separator } from "../ui/separator";
+import { createContext, useState, Dispatch, SetStateAction, useEffect } from "react";
 import FourBits from "@/components/fourBits";
-import { ToggleGroup, ToggleGroupItem } from "../ui/toggle-group";
-import Op from "../op";
-import FourBitsResult from "../bitsResults";
-import BitsResults from "../bitsResults";
+import Op from "@/components/op";
+import { Separator } from "@/components/ui/separator";
 import OpResult from "../opResult";
 
-export const bitsContext = createContext<{ a: number, setA: any, b: number, setB: any } | null>(null)
-
-export const opContext = createContext<{ opState: string, setOp: any, ops: string[], literalOps: object } | null>(null)
+export const bitsContext = createContext<{a:number, setA:Dispatch<SetStateAction<number>>, b:number, setB:Dispatch<SetStateAction<number>>} | null>(null)
+export const opContext = createContext<{ opState: string, setOp: Dispatch<SetStateAction<string>>, ops: string[], literalOps: {"+":string, "-":string, "*":string, "/":string} } | null>(null)
 
 export const resultsContext = createContext<{ sum: number, sub: number, mult: number, quotient: number, remainder: number } | null>(null)
 
@@ -70,7 +45,6 @@ export default function Bin() {
   const bitsStates = { a: a, setA: setA, b: b, setB: setB }
   const opStates = { opState: opState, setOp: setOp, ops: ops, literalOps: literalOps }
   const resultStates = { sum: results.sub, sub: results.sub, mult: results.mult, quotient: results.quotient, remainder: results.remainder }
-
 
   useEffect(() => {
     setResults({
