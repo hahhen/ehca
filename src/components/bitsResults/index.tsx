@@ -26,7 +26,7 @@ import Bit from "../bit";
 import { resultsContext } from "../bin/page";
 import BitResult from "../bitResults";
 
-export default function BitsResults(props: { n: number, bits: number }) {
+export default function BitsResults(props: { n: number, bits: number, isTwosComplement?:any }) {
 
     const n = props.n
     const bits = props.bits
@@ -34,7 +34,10 @@ export default function BitsResults(props: { n: number, bits: number }) {
     const [arr, setArr] = useState(new Array(bits))
 
     useEffect(() => {
+
+
         let nBinStr = (n >>> 0).toString(2)
+
 
         let s = ""
 
@@ -46,7 +49,7 @@ export default function BitsResults(props: { n: number, bits: number }) {
 
         let tempArr = new Array(bits)
 
-        for(let i = 0; i < nBinStr.length; i++){
+        for(let i = 0; i < bits; i++){
              tempArr[i] = nBinStr.charAt(nBinStr.length-i-1);
             
         }
@@ -60,14 +63,14 @@ export default function BitsResults(props: { n: number, bits: number }) {
     return (
         <main className="font-mono w-fit m-auto flex flex-row mx-7 mt-5">
             
-            <div className="flex flex-row-reverse mx-2">
+            <div className="flex flex-row-reverse mx-2 w-[20rem]">
                 {
                     arr.map((b, i) =>
-                        <BitResult key={i} arr={arr} i={i} />
+                        <BitResult key={i} arr={arr} i={i} isTwosComplement={props.isTwosComplement || false} />
                     )
                 }
             </div>
-            <span className="mt-2 text-2xl ml-[2rem] text-right">
+            <span className="mt-2 text-2xl ml-2 w-[5rem] text-right">
                 {n}
             </span>
 

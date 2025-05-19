@@ -77,8 +77,8 @@ export default function Bin() {
       sum: a + b,
       sub: a - b,
       mult: a * b,
-      quotient: (b != 0 ? Math.floor(a / b) : "Indefinido"),
-      remainder: (b != 0 ? a % b : "Indefinido")
+      quotient: (b != 0 ? Math.floor(a / b) : "Indef."),
+      remainder: (b != 0 ? a % b : "Indef.")
     })
   }, [a, b])
 
@@ -110,10 +110,13 @@ export default function Bin() {
       </div> */}
 
       <OpResult op="Adição" v={results.sum} bits={5}/>
-      <OpResult op="Subtração" v={results.sub} bits={4}/>
+      <OpResult op="Subtração" v={results.sub} bits={5} isTwosComplement={true}/>
       <OpResult op="Multiplicação" v={results.mult} bits={8}/>
       <OpResult op="Quociente" v={results.quotient} bits={4}/>
       <OpResult op="Resto" v={results.remainder} bits={4}/>
+      <span className="opacity-25">
+        Indef. significa "indefinido" (divisão por zero)
+      </span>
       
 
     </main>
