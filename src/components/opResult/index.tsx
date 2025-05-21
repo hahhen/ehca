@@ -18,21 +18,24 @@ import {
     DialogTrigger,
 } from "@/components/ui/dialog"
 
-export default function OpResult(props: { op: string, v: number, bits: number, isTwosComplement?: any }) {
+export default function OpResult(props: { op: string, v: any, bits: number, isTwosComplement?: any }) {
 
-    return <div className="h-20">
+    return <div className="min-h-[8rem]">
         <Separator />
-        <div className="flex items-center">
-            <span className="w-20">
+        <div className="flex items-center justify-between w-full">
+            <span className="w-fit text-[1.2rem]">
 
                 {
                     props.isTwosComplement ?
                         <Dialog>
-                            <DialogTrigger className="underline">{props.op}</DialogTrigger>
+                            <DialogTrigger className="p-2 border rounded flex flex-col items-start">
+                                <p className="underline">{props.op}</p>
+                                <p className="no-underline opacity-40 text-[1rem]">Saiba mais!</p>
+                            </DialogTrigger>
                             <DialogContent>
                                 <DialogHeader>
                                     <DialogTitle>📘 O que é o complemento de 2?</DialogTitle>
-                                    <DialogDescription>
+                                    <DialogDescription className="text-left">
                                         <p className="mb-4">
                                             É uma forma que os computadores usam para representar <strong>números negativos</strong> e realizar <strong>subtrações apenas com somas</strong>.
                                         </p>
@@ -99,7 +102,20 @@ export default function OpResult(props: { op: string, v: number, bits: number, i
 
 
             </span>
-            <BitsResults n={props.v} bits={props.bits} isTwosComplement={props.isTwosComplement || false} />
+            {
+                typeof props.v == "object" ? (
+                    <>
+                        <div className="flex flex-col">
+                            <BitsResults n={props.v.quotient} bits={props.bits} isTwosComplement={props.isTwosComplement || false} />
+                            <div className="w-fit m-0">
+                                <Separator orientation="horizontal"/>
+                            </div>
+                            <BitsResults n={props.v.remainder} bits={props.bits} isTwosComplement={props.isTwosComplement || false} />
+                        </div>
+                    </>
+                ) : <BitsResults n={props.v} bits={props.bits} isTwosComplement={props.isTwosComplement || false} />
+
+            }
         </div>
     </div>
 }

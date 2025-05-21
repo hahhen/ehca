@@ -58,10 +58,22 @@ export default function Bin() {
 
   return (
 
-    <main className="font-mono w-fit m-auto flex flex-col mt-20">
-      <section className="flex mb-5">
+    <main className="font-mono w-fit m-auto flex flex-col mt-20 bg-card/80 py-6 rounded-2xl px-4 border">
+
+      <h2 className="m-auto font-serif text-4xl text-center">
+        Explore a matemática <br/>com 0s e 1s
+      </h2>
+
+      <p className="pb-4 pt-2 m-auto">
+        Toque ou clique nos bits!
+      </p>
+
+      <section className="flex mb-5 justify-around">
         <bitsContext.Provider value={bitsStates}>
           <FourBits v={"a"} />
+          <div className="h-[7rem]">
+                            <Separator orientation="vertical"/>
+                        </div>
           {/* <opContext.Provider value={opStates}>
             <section className="flex flex-col gap-2 font-mono">
               {ops.map((e, i) => <Op op={e} key={i} />)}
@@ -85,11 +97,10 @@ export default function Bin() {
 
       <OpResult op="Adição" v={results.sum} bits={5}/>
       <OpResult op="Subtração" v={results.sub} bits={5} isTwosComplement={true}/>
-      <OpResult op="Multiplicação" v={results.mult} bits={8}/>
-      <OpResult op="Quociente" v={results.quotient} bits={4}/>
-      <OpResult op="Resto" v={results.remainder} bits={4}/>
+      <OpResult op="Produto" v={results.mult} bits={8}/>
+      <OpResult op="Divisão e Resto" v={results} bits={4}/>
       <span className="opacity-25">
-        Indef. significa "indefinido" (divisão por zero)
+        Indef. significa "indefinido" <br/> (divisão por zero)
       </span>
       
 

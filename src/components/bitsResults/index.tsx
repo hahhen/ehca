@@ -61,16 +61,16 @@ export default function BitsResults(props: { n: number, bits: number, isTwosComp
     
 
     return (
-        <main className="font-mono w-fit m-auto flex flex-row mx-7 mt-5">
+        <main className="font-mono w-fit flex flex-col items-end mt-4">
             
-            <div className="flex flex-row-reverse mx-2 w-[20rem]">
+            <div className="flex flex-row-reverse mx-2 w-fit">
                 {
                     arr.map((b, i) =>
                         <BitResult key={i} arr={arr} i={i} isTwosComplement={props.isTwosComplement || false} />
                     )
                 }
             </div>
-            <span className="mt-2 text-2xl ml-2 w-[5rem] text-right">
+            <span className=" text-2xl w-[5rem] text-right mr-5">
                 {n}
             </span>
 
