@@ -14,7 +14,8 @@
         "Leibniz defendeu que esta era a forma mais simples e pura de entender e manipular números, principalmente porque as operações aritméticas se tornavam muito mais simples, sem a necessidade de memorizar tabuadas complexas.",
         "Um fato notável é que Leibniz chegou a descrever um mecanismo de computação surpreendentemente semelhante aos computadores modernos, incluindo o conceito do que viria a ser o sistema de cartões perfurados para entrada e saída de dados.",
         "Esta visão foi profética, já que hoje a maioria dos computadores modernos opera fundamentalmente no sistema binário devido à facilidade de implementação em circuitos eletrônicos."
-      ]
+      ],
+      "imagem" : "https://i.pinimg.com/736x/c8/06/d5/c806d5f01385ad33df06eac80fd5e968.jpg"
     },
     {
       "subtitulo": "Aritmética Binária: As Quatro Operações Fundamentais",
@@ -27,7 +28,8 @@
         "Essas operações seguem o mesmo procedimento das operações decimais, mas com muito menos casos a considerar, tornando o cálculo mais direto e menos propenso a erros.",
         "Por exemplo, para somar 12 (1100 em binário) e 6 (110 em binário), seguimos o processo normal de soma, porém usando apenas as regras binárias, resultando em 18 (10010 em binário).",
         "Esta simplicidade na aritmética binária é um dos principais motivos pelos quais os computadores modernos utilizam esse sistema, pois é muito mais fácil implementar essas operações com portas lógicas eletrônicas."
-      ]
+      ],
+      "imagem": "https://media.geeksforgeeks.org/wp-content/uploads/20241011123008598976/Add-two-binary-strings-using-Bit-by-Bit-addition.webp"
     },
     {
       "subtitulo": "O Contador Mecânico de Leibniz (1694)",
@@ -39,7 +41,8 @@
         "O primeiro protótipo, capaz de operar com apenas dois dígitos, foi construído em 1672 e apresentado na Academia Francesa de Ciências.",
         "Apenas duas máquinas originais da época de Leibniz sobreviveram até os nossos dias. Uma delas ficou esquecida em um sótão na Universidade de Göttingen até ser descoberta acidentalmente em 1879, durante um reparo no telhado.",
         "O projeto final de Leibniz acabou se tornando a base para as calculadoras mecânicas que permaneceram em uso até a década de 1970, quando foram finalmente substituídas pelos modelos eletrônicos."
-      ]
+      ],
+      "imagem": "https://veja.abril.com.br/wp-content/uploads/2022/08/GettyImages-463905541.jpg?quality=70&strip=info&crop=1&resize=1080,565"
     },
     {
       "subtitulo": "O Cilindro Escalonado: Inovação Mecânica para o Cálculo",
@@ -51,7 +54,8 @@
         "Para multiplicações simples, como 825×3, o operador posicionava os indicadores nos dígitos 8, 2 e 5, e girava a manivela 3 vezes, realizando efetivamente a operação 825+825+825.",
         "Para multiplicações de números maiores, como 1873×249, Leibniz criou um mecanismo ainda mais engenhoso. O conjunto era posicionado primeiro na casa das centenas para dois giros, depois nas dezenas para quatro giros, e finalmente nas unidades para nove giros, calculando 1873×(2×100) + 1873×(4×10) + 1873×(9×1).",
         "Acredita-se que a máquina de Leibniz não tenha sido um sucesso completo em sua época devido ao alto custo e porque aparentemente o problema do mecanismo de 'vai um' (carry) não foi completamente resolvido, exigindo intervenção manual em alguns casos."
-      ]
+      ],
+      "imagem": "https://www.madas.ch/wp-content/uploads/Leibniz1-300x259.jpg"
     }
   ],
   "conclusao": [

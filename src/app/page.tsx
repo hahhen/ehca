@@ -82,7 +82,7 @@ export default function Home() {
 
                   <div className="rounded-xl relative aspect-square overflow-hidden">
                     <Image
-                      src={"https://plus.unsplash.com/premium_vector-1739262161806-d954eb02427c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXxxdGU5Smx2R3d0b3x8ZW58MHx8fHx8"}
+                      src={secao.imagem}
                       alt={"Lighthouse"}
                       className="object-cover"
                       fill
