@@ -46,7 +46,7 @@ export default function Bin() {
 
   return (
 
-    <main className="font-mono w-fit m-auto flex flex-col mt-20 bg-card/80 py-6 rounded-2xl px-4 border md:flex-row md:gap-5">
+    <main className="font-mono w-fit m-auto flex flex-col mt-20 bg-card/80 py-6 rounded-2xl px-2 border md:flex-row md:gap-5">
       <section className="md:mt-10">
 
         <h2 className="m-auto font-serif text-4xl text-center mb-5">

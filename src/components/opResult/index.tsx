@@ -12,10 +12,10 @@ import {
 
 export default function OpResult(props: { op: string, v: number | {sum: number, sub: number, mult: number, quotient: number | string, remainder: number | string}, bits: number, isTwosComplement?: unknown }) {
 
-    return <div className="min-h-[8rem]">
+    return <div className="min-h-[8rem] mb-2">
         <Separator />
-        <div className="flex items-center justify-between w-full">
-            <span className="w-fit text-[1.2rem]">
+        <div className={`flex justify-between w-full ${props.isTwosComplement || props.op == "Adição" ? "flex-row items-center" : "flex-col items-end"}`}>
+            <span className="text-[1.2rem] w-full mt-2">
 
                 {
                     props.isTwosComplement ?
@@ -97,7 +97,7 @@ export default function OpResult(props: { op: string, v: number | {sum: number, 
             {
                 typeof props.v == "object" ? (
                     <>
-                        <div className="flex flex-col">
+                        <div className="flex flex-row">
                             <BitsResults n={props.v.quotient} bits={props.bits} isTwosComplement={props.isTwosComplement || false} />
                             <div className="w-fit m-0">
                                 <Separator orientation="horizontal"/>
