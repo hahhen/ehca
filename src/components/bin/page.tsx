@@ -2,21 +2,28 @@
 
 import { createContext, useState, Dispatch, SetStateAction, useEffect } from "react";
 import FourBits from "@/components/fourBits";
-import Op from "@/components/op";
 import { Separator } from "@/components/ui/separator";
 import OpResult from "../opResult";
 
-export const bitsContext = createContext<{a:number, setA:Dispatch<SetStateAction<number>>, b:number, setB:Dispatch<SetStateAction<number>>} | null>(null)
-export const opContext = createContext<{ opState: string, setOp: Dispatch<SetStateAction<string>>, ops: string[], literalOps: {"+":string, "-":string, "*":string, "/":string} } | null>(null)
+export const bitsContext = createContext<{ a: number, setA: Dispatch<SetStateAction<number>>, b: number, setB: Dispatch<SetStateAction<number>> } | null>(null)
+export const opContext = createContext<{ opState: string, setOp: Dispatch<SetStateAction<string>>, ops: string[], literalOps: { "+": string, "-": string, "*": string, "/": string } } | null>(null)
 
-export const resultsContext = createContext<{ sum: number, sub: number, mult: number, quotient: number, remainder: number } | null>(null)
+export const resultsContext = createContext<{ sum: number, sub: number, mult: number, quotient: unknown, remainder: unknown } | null>(null)
+
+type Result = {
+  sum: number,
+  sub: number,
+  mult: number,
+  quotient: number | string,
+  remainder: number | string
+}
 
 export default function Bin() {
 
   const [a, setA] = useState(0)
   const [b, setB] = useState(0)
 
-  const [results, setResults] = useState({
+  const [results, setResults] = useState<Result>({
     sum: 0,
     sub: 0,
     mult: 0,
@@ -24,27 +31,8 @@ export default function Bin() {
     remainder: 0
   })
 
-  const [binResults, setBinResults] = useState({
-    sum: [0, 0, 0, 0, 0],
-    sub: [0, 0, 0, 0],
-    mult: [0, 0, 0, 0, 0, 0, 0, 0],
-    quotient: [0, 0, 0, 0],
-    remainder: [0, 0, 0, 0]
-  })
-
-  const [opState, setOp] = useState("+")
-  const ops = ["+", "-", "*", "/"]
-  const literalOps = {
-    "+": "Adição",
-    "-": "Subtração",
-    "*": "Multiplicação",
-    "/": "Divisão"
-  }
-
   //{ n: n, setN: setN, m: m, setM: setM }
   const bitsStates = { a: a, setA: setA, b: b, setB: setB }
-  const opStates = { opState: opState, setOp: setOp, ops: ops, literalOps: literalOps }
-  const resultStates = { sum: results.sub, sub: results.sub, mult: results.mult, quotient: results.quotient, remainder: results.remainder }
 
   useEffect(() => {
     setResults({
@@ -58,51 +46,55 @@ export default function Bin() {
 
   return (
 
-    <main className="font-mono w-fit m-auto flex flex-col mt-20 bg-card/80 py-6 rounded-2xl px-4 border">
+    <main className="font-mono w-fit m-auto flex flex-col mt-20 bg-card/80 py-6 rounded-2xl px-4 border md:flex-row md:gap-5">
+      <section className="md:mt-10">
 
-      <h2 className="m-auto font-serif text-4xl text-center">
-        Explore a matemática <br/>com 0s e 1s
-      </h2>
+        <h2 className="m-auto font-serif text-4xl text-center mb-5">
+          Explore a matemática <br />com 0s e 1s
+        </h2>
 
-      <p className="pb-4 pt-2 m-auto">
-        Toque ou clique nos bits!
-      </p>
+        <p className="pb-4 pt-2 text-xl m-auto text-center">
+          Toque ou clique nos bits para inserir números!
+        </p>
 
-      <section className="flex mb-5 justify-around">
-        <bitsContext.Provider value={bitsStates}>
-          <FourBits v={"a"} />
-          <div className="h-[7rem]">
-                            <Separator orientation="vertical"/>
-                        </div>
-          {/* <opContext.Provider value={opStates}>
-            <section className="flex flex-col gap-2 font-mono">
-              {ops.map((e, i) => <Op op={e} key={i} />)}
-              <span className="m-auto mt-4 text-3xl">
-                {opState}
-              </span>
-            </section>
-          </opContext.Provider> */}
-          <FourBits v={"b"} />
-        </bitsContext.Provider>
+        <section className="flex mb-5 justify-around">
+          <bitsContext.Provider value={bitsStates}>
+            <FourBits v={"a"} />
+            <div className="h-[7rem]">
+              <Separator orientation="vertical" />
+            </div>
+            {/* <opContext.Provider value={opStates}>
+              <section className="flex flex-col gap-2 font-mono">
+                {ops.map((e, i) => <Op op={e} key={i} />)}
+                <span className="m-auto mt-4 text-3xl">
+                  {opState}
+                </span>
+              </section>
+            </opContext.Provider> */}
+            <FourBits v={"b"} />
+          </bitsContext.Provider>
+        </section>
+        {/* <div className="h-20">
+          <Separator />
+          <div className="flex items-center">
+            <span>
+            Adição
+            </span>
+            <BitsResults n={results.sum} bits={5} />
+          </div>
+        </div> */}
       </section>
-      {/* <div className="h-20">
-        <Separator />
-        <div className="flex items-center">
-          <span>
-          Adição
-          </span>
-          <BitsResults n={results.sum} bits={5} />
-        </div>
-      </div> */}
 
-      <OpResult op="Adição" v={results.sum} bits={5}/>
-      <OpResult op="Subtração" v={results.sub} bits={5} isTwosComplement={true}/>
-      <OpResult op="Produto" v={results.mult} bits={8}/>
-      <OpResult op="Divisão e Resto" v={results} bits={4}/>
-      <span className="opacity-25">
-        Indef. significa "indefinido" <br/> (divisão por zero)
-      </span>
-      
+      <div>
+        <OpResult op="Adição" v={results.sum} bits={5} />
+        <OpResult op="Subtração" v={results.sub} bits={5} isTwosComplement={true} />
+        <OpResult op="Produto" v={results.mult} bits={8} />
+        <OpResult op="Divisão e Resto" v={results} bits={4} />
+        <span className="opacity-25">
+          Indef. significa &quot;indefinido&quot; <br /> (divisão por zero)
+        </span>
+      </div>
+
 
     </main>
 

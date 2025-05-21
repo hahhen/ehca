@@ -27,14 +27,17 @@ export default function Sidebar({ className }: { className?: string }) {
                             <Button variant="ghost" asChild><NavigationMenuLink href="#" className="w-full items-start" >Home</NavigationMenuLink></Button>
                         </NavigationMenuItem>
                         <NavigationMenuItem className="w-full" >
-                            <Button variant="ghost" asChild ><NavigationMenuLink href="#" className="w-full items-start">Modelos</NavigationMenuLink></Button>
+                            <Button variant="ghost" asChild ><NavigationMenuLink href="https://mc.icmc.usp.br/" className="w-full items-start">Visite o Museu</NavigationMenuLink></Button>
                         </NavigationMenuItem>
                         <NavigationMenuItem className="w-full" >
+                            <Button variant="ghost" asChild><NavigationMenuLink href="#" className="w-full items-start" >Avalie esse Projeto!</NavigationMenuLink></Button>
+                        </NavigationMenuItem>
+                        {/* <NavigationMenuItem className="w-full" >
                             <Button variant="ghost" asChild ><NavigationMenuLink href="#" className="w-full items-start">Linha do Tempo</NavigationMenuLink></Button>
                         </NavigationMenuItem>
                         <NavigationMenuItem className="w-full" >
                             <Button variant="ghost" asChild ><NavigationMenuLink href="#" className="w-full items-start">Sobre</NavigationMenuLink></Button>
-                        </NavigationMenuItem>
+                        </NavigationMenuItem> */}
                     </NavigationMenuList>
                 </NavigationMenu>
                 <SheetFooter className="flex mt-4">

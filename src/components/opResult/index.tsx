@@ -1,24 +1,16 @@
 import BitsResults from "../bitsResults";
 import { Separator } from "../ui/separator";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "../ui/tooltip";
-
-import {
-    Popover,
-    PopoverContent,
-    PopoverTrigger,
-} from "@/components/ui/popover"
 
 import {
     Dialog,
     DialogContent,
     DialogDescription,
-    DialogFooter,
     DialogHeader,
     DialogTitle,
     DialogTrigger,
 } from "@/components/ui/dialog"
 
-export default function OpResult(props: { op: string, v: any, bits: number, isTwosComplement?: any }) {
+export default function OpResult(props: { op: string, v: number | {sum: number, sub: number, mult: number, quotient: number | string, remainder: number | string}, bits: number, isTwosComplement?: unknown }) {
 
     return <div className="min-h-[8rem]">
         <Separator />

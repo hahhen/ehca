@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 export default function Footer() {
 
@@ -8,11 +9,12 @@ export default function Footer() {
 
           <div className="grid grid-cols-2 gap-8 lg:grid-cols-6">
             <div className="col-span-2 mb-8 lg:mb-0">
-              <div className="flex items-center gap-2 lg:justify-start">
+              <div className="flex items-center gap-2 flex-col lg:flex-row lg:justify-start">
                 <a href="https://shadcnblocks.com">
 
                 </a>
-                <h1 className="text-3xl font-serif">Computadores Revolucionários</h1>
+                <h1 className="text-3xl font-serif mb-5">Computadores Revolucionários</h1>
+                <p>Gostou? Avalie esse projeto <Link href={""} className="underline">nesse link!</Link></p>
               </div>
             </div>
             {/* {menuItems.map((section, sectionIdx) => (

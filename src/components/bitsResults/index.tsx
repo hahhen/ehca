@@ -1,32 +1,9 @@
 "use client"
 
-import Image from "next/image";
-import { Button } from "@/components/ui/button"
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
-    CardTitle,
-} from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import {
-    Tabs,
-    TabsContent,
-    TabsList,
-    TabsTrigger,
-} from "@/components/ui/tabs"
-
-import { useContext, useEffect, useState } from "react";
-import { Separator } from "@radix-ui/react-separator";
-import { Toggle } from "@/components/ui/toggle";
-import Bit from "../bit";
-import { resultsContext } from "../bin/page";
+import {useEffect, useState } from "react";
 import BitResult from "../bitResults";
 
-export default function BitsResults(props: { n: number, bits: number, isTwosComplement?:any }) {
+export default function BitsResults(props: { n: number | string, bits: number, isTwosComplement?:unknown }) {
 
     const n = props.n
     const bits = props.bits
@@ -36,7 +13,7 @@ export default function BitsResults(props: { n: number, bits: number, isTwosComp
     useEffect(() => {
 
 
-        let nBinStr = (n >>> 0).toString(2)
+        let nBinStr = typeof n == 'number' ? (n >>> 0).toString(2) : ""
 
 
         let s = ""
@@ -47,7 +24,7 @@ export default function BitsResults(props: { n: number, bits: number, isTwosComp
 
         nBinStr = s + nBinStr
 
-        let tempArr = new Array(bits)
+        const tempArr = new Array(bits)
 
         for(let i = 0; i < bits; i++){
              tempArr[i] = nBinStr.charAt(nBinStr.length-i-1);

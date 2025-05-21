@@ -9,7 +9,6 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 import StackingCards, { StackingCardItem } from "@/fancy/components/blocks/stacking-cards";
 import AppliedCarousel from "@/components/carousel/carousel";
-import { Separator } from "@/components/ui/separator";
 
 
 export default function Home() {
