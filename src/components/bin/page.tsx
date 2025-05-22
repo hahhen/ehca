@@ -46,14 +46,14 @@ export default function Bin() {
 
   return (
 
-    <main className="font-mono w-fit m-auto flex flex-col mt-20 bg-card/80 py-6 rounded-2xl px-2 border md:flex-row md:gap-5">
-      <section className="md:mt-10">
+    <main className="font-mono w-full m-auto flex flex-col mt-20 bg-card/80 py-6 rounded-2xl px-2 border md:flex-row md:gap-[2rem] md:p-5">
+      <section className=" md:flex md:flex-col md:justify-center md:m-auto">
 
         <h2 className="m-auto font-serif text-4xl text-center mb-5">
           Explore a matemática <br />com 0s e 1s
         </h2>
 
-        <p className="pb-4 pt-2 text-xl m-auto text-center">
+        <p className="pb-4 pt-2 text-xl md:m-0 m-auto text-center">
           Toque ou clique nos bits para inserir números!
         </p>
 
