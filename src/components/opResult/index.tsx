@@ -27,8 +27,8 @@ export default function OpResult(props: { op: string, v: number | { sum: number,
                             <DialogContent>
                                 <DialogHeader>
                                     <DialogTitle className="font-serif text-2xl text-center">O que é o complemento de 2?</DialogTitle>
-                                    <DialogDescription className="text-left max-h-[70vh]  overflow-scroll">
-                                        <div className="text-white flex flex-col overflow-scroll">
+                                    <DialogDescription className="text-left max-h-[70vh]  overflow-y-scroll">
+                                        <div className="text-white flex flex-col">
                                             <p className="mb-4">
                                                 É uma forma que os computadores usam para representar <strong>números negativos</strong> e realizar <strong>subtrações apenas com somas</strong>.
                                             </p>
