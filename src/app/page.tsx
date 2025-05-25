@@ -66,7 +66,7 @@ export default function Home() {
         <section>
           {data.secoes.map((secao, index) => {
             return (
-              <StackingCardItem key={index} index={index} className="h-[620px]">
+              <StackingCardItem key={index} index={index} className="h-[95vh]">
                 <div
                   className={cn(colors[index], "border h-[80%] sm:h-[70%] flex-col sm:flex-row gap-2 aspect-video px-4 lg:px-8 py-10 flex w-full rounded-3xl relative top-21 -mt-24 "
                   )}
