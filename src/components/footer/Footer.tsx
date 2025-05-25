@@ -14,7 +14,7 @@ export default function Footer() {
 
                 </a>
                 <h1 className="text-3xl font-serif mb-5">Computadores Revolucionários</h1>
-                <p>Gostou? Avalie esse projeto <Link href={""} className="underline">nesse link!</Link></p>
+                <p>Gostou? Avalie esse projeto <Link target="_blank" href={"https://forms.gle/F8B5uyFD5piv3H3q7"} className="underline">nesse link!</Link></p>
               </div>
             </div>
             {/* {menuItems.map((section, sectionIdx) => (

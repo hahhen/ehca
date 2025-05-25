@@ -30,7 +30,7 @@ export default function Sidebar({ className }: { className?: string }) {
                             <Button variant="ghost" asChild ><NavigationMenuLink href="https://mc.icmc.usp.br/" className="w-full items-start">Visite o Museu</NavigationMenuLink></Button>
                         </NavigationMenuItem>
                         <NavigationMenuItem className="w-full" >
-                            <Button variant="ghost" asChild><NavigationMenuLink href="#" className="w-full items-start" >Avalie esse Projeto!</NavigationMenuLink></Button>
+                            <Button variant="ghost" asChild><NavigationMenuLink href="https://forms.gle/F8B5uyFD5piv3H3q7" target="_blank" className="w-full items-start" >Avalie esse Projeto!</NavigationMenuLink></Button>
                         </NavigationMenuItem>
                         {/* <NavigationMenuItem className="w-full" >
                             <Button variant="ghost" asChild ><NavigationMenuLink href="#" className="w-full items-start">Linha do Tempo</NavigationMenuLink></Button>
