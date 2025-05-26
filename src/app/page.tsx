@@ -66,7 +66,7 @@ export default function Home() {
         <section>
           {data.secoes.map((secao, index) => {
             return (
-              <StackingCardItem key={index} index={index} className="h-[620px]">
+              <StackingCardItem key={index} index={index} className="h-[95vh]">
                 <div
                   className={cn(colors[index], "border h-[80%] sm:h-[70%] flex-col sm:flex-row gap-2 aspect-video px-4 lg:px-8 py-10 flex w-full rounded-3xl relative top-21 -mt-24 "
                   )}
@@ -81,7 +81,7 @@ export default function Home() {
 
                   <div className="rounded-xl relative aspect-square overflow-hidden">
                     <Image
-                      src={"https://plus.unsplash.com/premium_vector-1739262161806-d954eb02427c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXxxdGU5Smx2R3d0b3x8ZW58MHx8fHx8"}
+                      src={secao.imagem}
                       alt={"Lighthouse"}
                       className="object-cover"
                       fill

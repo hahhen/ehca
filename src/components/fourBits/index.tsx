@@ -29,7 +29,7 @@ export default function FourBits(props : {v : string}) {
   }, [n])
 
   return (
-    <main className="font-mono w-fit m-auto flex flex-col mx-7 my-0">
+    <main className="font-mono w-fit m-auto flex flex-col my-0">
       <div className="flex flex-row-reverse">
         {
           n.map((b, i) =>

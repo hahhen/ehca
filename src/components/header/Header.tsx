@@ -17,14 +17,17 @@ export default function Header() {
                         <Button variant="ghost" asChild><NavigationMenuLink href="#" >Home</NavigationMenuLink></Button>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
-                        <Button variant="ghost" asChild ><NavigationMenuLink href="#">Modelos</NavigationMenuLink></Button>
+                        <Button variant="ghost" asChild ><NavigationMenuLink href="https://mc.icmc.usp.br/" target="_blank">Visite o Museu</NavigationMenuLink></Button>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
+                        <Button variant="ghost" asChild><NavigationMenuLink href="https://forms.gle/F8B5uyFD5piv3H3q7" target="_blank" >Avalie esse Projeto!</NavigationMenuLink></Button>
+                    </NavigationMenuItem>
+                    {/* <NavigationMenuItem>
                         <Button variant="ghost" asChild ><NavigationMenuLink href="#" >Linha do Tempo</NavigationMenuLink></Button>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
                         <Button variant="ghost" asChild ><NavigationMenuLink href="#">Sobre</NavigationMenuLink></Button>
-                    </NavigationMenuItem>
+                    </NavigationMenuItem> */}
                 </NavigationMenuList>
             </NavigationMenu>
             <Sidebar className="lg:hidden"/>

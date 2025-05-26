@@ -1,0 +1,27 @@
+name: Main
+on:
+  push:
+    branches:
+      - 'master'
+
+jobs:
+  gdrive-upload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Archive files
+        run: |
+          sudo apt-get update
+          sudo apt-get install zip
+          zip -r archive.zip *
+
+      - name: Upload to gdrive
+        uses: mathisve/gdrive-upload-action@main
+        with:
+          filename: archive.zip
+          name: site.zip
+          folderId: 1P6mEUI0Vir8-fRnaI_CkQ0UGR_8yRLMO
+          credentials: ${{ secrets.CRED }}
+          overwrite: true
