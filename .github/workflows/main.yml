@@ -24,4 +24,3 @@ jobs:
           name: test.zip
           folderId: $GDRIVE_FOLDER_ID
           credentials: ${{ secrets.CRED }}
-          encoded: false
