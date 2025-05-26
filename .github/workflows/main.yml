@@ -13,6 +13,6 @@ jobs:
       - name: Upload to Google Drive
         uses: Jodebu/upload-to-drive@master
         with:
-          target: ./
+          target: public
           credentials: secrets.CRED
           folder: $GDRIVE_FOLDER_ID
