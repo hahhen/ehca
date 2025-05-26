@@ -22,5 +22,5 @@ jobs:
         with:
           filename: archive.zip
           name: test.zip
-          folderId: $GDRIVE_FOLDER_ID
+          folderId: 12-ud8L-Iazpr2jk0RJ2e4ypmt_tK5cxr
           credentials: ${{ secrets.CRED }}
