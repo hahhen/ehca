@@ -1,18 +1,27 @@
-name: Upload Google Drive
+name: Main
 on:
-  push: { branches: [master] }
+  push:
+    branches:
+      - 'master'
+
 jobs:
-  buildAndTestForSomePlatforms:
-    name: Upload readme to drive
+  gdrive-upload:
     runs-on: ubuntu-latest
     steps:
-      # Checkout
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v2
-      # Upload to Drive
-      - name: Upload to Google Drive
-        uses: Jodebu/upload-to-drive@master
+
+      - name: Archive files
+        run: |
+          sudo apt-get update
+          sudo apt-get install zip
+          zip -r archive.zip *
+
+      - name: Upload to gdrive
+        uses: mathisve/gdrive-upload-action@main
         with:
-          target: public
+          filename: archive.zip
+          name: test.zip
+          folderId: $GDRIVE_FOLDER_ID
           credentials: ${{ secrets.CRED }}
-          folder: 12-ud8L-Iazpr2jk0RJ2e4ypmt_tK5cxr
+          encoded: false
