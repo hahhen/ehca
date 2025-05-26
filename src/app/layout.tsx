@@ -3,6 +3,7 @@ import localFont from 'next/font/local';
 import "./globals.css";
 import Header from '@/components/header/Header';
 import Footer from '@/components/footer/Footer';
+import { Analytics } from "@vercel/analytics/next"
 import { ThemeProvider } from "@/components/theme/theme-provider"
 
 const appleGaramond = localFont({
@@ -57,6 +58,7 @@ export default function RootLayout({
             <Footer />
           </div>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
