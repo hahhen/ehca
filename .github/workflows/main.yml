@@ -15,4 +15,4 @@ jobs:
         with:
           target: public
           credentials: secrets.CRED
-          folder: $12-ud8L-Iazpr2jk0RJ2e4ypmt_tK5cxr
+          folder: 12-ud8L-Iazpr2jk0RJ2e4ypmt_tK5cxr
