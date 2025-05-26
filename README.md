@@ -1,7 +1,7 @@
 # Leibniz e Computação - Website
+[![Website](https://img.shields.io/website?url=https://leibnizebin.vercel.app/ "Website")](https://leibnizebin.vercel.app/)
 
 Repositório do website para o projeto final de Evolução Histórica da Computação e Aplicações.  
-[![Website](https://img.shields.io/website?url=https://leibnizebin.vercel.app/ "Website")](https://leibnizebin.vercel.app/)
 
 ## Autores
 [![Arthur Martins Pereira][arthurm]][arthurml]
