@@ -14,5 +14,5 @@ jobs:
         uses: Jodebu/upload-to-drive@master
         with:
           target: public
-          credentials: secrets.CRED
+          credentials: ${{ secrets.CRED }}
           folder: 12-ud8L-Iazpr2jk0RJ2e4ypmt_tK5cxr
