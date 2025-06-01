@@ -8,12 +8,18 @@ export default function Footer() {
       <div className="my-4 mx-2 lg:mx-4 flex justify-between items-center py-6 rounded-2xl px-4 lg:px-8 bg-card/80 z-50 backdrop-blur-md border">
         <div className="container">
 
-          <div className="grid grid-cols-2 gap-8 lg:grid-cols-6">
+          <div className="flex flex-col md:grid md:grid-cols-2 gap-8 lg:grid-cols-6">
             <div className="col-span-2 lg:mb-0">
-              <div className="flex items-center gap-2 flex-col lg:flex-row lg:justify-start">
+              <div className="flex items-center gap-5 flex-col lg:flex-row lg:justify-start">
                 <h1 className="text-3xl font-serif mb-5">Computadores Revolucionários</h1>
                 <p>Gostou? Avalie esse projeto <Link target="_blank" href={"https://forms.gle/F8B5uyFD5piv3H3q7"} className="underline">nesse link!</Link></p>
               </div>
+              
+            </div>
+            <div className="col-start-5 col-span-2 lg:mb-0">
+              <div className="flex items-center gap-2 flex-col lg:flex-row lg:justify-start">
+WAZLAWICK, Raul Sidnei. História da computação. 2. ed. Florianópolis: Visual Books, 2009.              </div>
+              
             </div>
             {/* {menuItems.map((section, sectionIdx) => (
                 <div>
