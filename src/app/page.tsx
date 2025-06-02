@@ -94,8 +94,10 @@ export default function Home() {
         </section>
       </StackingCards>
       <div className="flex flex-wrap gap-4 justify-center">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/R4o421whXDE?si=ktBr3hKXyBb29xcT" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/ebUK3O7F_14?si=z8803HWenLQ-i6KI" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+        <h1 className="font-serif text-4xl">Vídeos</h1>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/R4o421whXDE" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ebUK3O7F_14" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/RMAxxgl_-4Y" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
       </div>
       <Bin />
     </main>

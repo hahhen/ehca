@@ -2,6 +2,7 @@ import Image from "next/image"
 import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from "@/components/ui/navigation-menu";
 import { Button } from "@/components/ui/button";
 import Sidebar from "./Sidebar";
+import { Github } from "lucide-react";
 
 export default function Header() {
 
@@ -28,9 +29,13 @@ export default function Header() {
                     <NavigationMenuItem>
                         <Button variant="ghost" asChild ><NavigationMenuLink href="#">Sobre</NavigationMenuLink></Button>
                     </NavigationMenuItem> */}
+                    <NavigationMenuItem>
+                        <Button size={"icon"} variant="ghost" asChild><NavigationMenuLink className="p-0" href="https://github.com/hahhen/ehca" target="_blank" ><Github color="var(--foreground)"/></NavigationMenuLink></Button>
+                    </NavigationMenuItem>
                 </NavigationMenuList>
             </NavigationMenu>
-            <Sidebar className="lg:hidden"/>
+            <Sidebar className="lg:hidden" />
+
         </header>
     )
 
