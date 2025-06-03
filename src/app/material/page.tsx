@@ -1,7 +1,6 @@
 "use client"
 
 import { Separator } from '@/components/ui/separator';
-import DocViewer, { DocViewerRenderers } from '@cyntler/react-doc-viewer';
 
 export default function Material() {
     return (
